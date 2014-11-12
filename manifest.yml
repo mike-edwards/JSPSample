@@ -1,0 +1,10 @@
+applications:
+- disk_quota: 1024M
+  host: JSPSample
+  name: JSPSample
+  path: JSPSample.war
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+  services:
+  - SQL Database-04

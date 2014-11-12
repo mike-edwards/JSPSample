@@ -46,7 +46,7 @@
                 </c:forEach>
             </tbody>
         </table>
-        <p style="margin-left: auto; margin-right: auto; width:800px;"><a href="EmployeeController?action=insert&empId=<c:out value="${fn:length(employees)+1}"/>">Add Employee</a>
+        <p style="margin-left: auto; margin-right: auto; width:800px;"><a href="EmployeeController?action=insert&empId=<c:out value="${fn:length(employees)*2}"/>">Add Employee</a>
             <br />
             <a href="index.jsp" >Index</a>
         </p>

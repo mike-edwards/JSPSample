@@ -34,7 +34,7 @@
                 </c:forEach>
             </tbody>
         </table>
-        <p style="margin-left: auto; margin-right: auto; width:800px;"><a href="DepartmentController?action=insert&deptId=<c:out value="${fn:length(depts) + 1}"/>">Add Department</a>
+        <p style="margin-left: auto; margin-right: auto; width:800px;"><a href="DepartmentController?action=insert&deptId=<c:out value="${fn:length(depts)*2}"/>">Add Department</a>
             <br />
             <a href="index.jsp" >Index</a>
         </p>

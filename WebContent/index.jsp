@@ -15,9 +15,9 @@
                 <td>
                     <h1 id = "message">  Welcome to Simple Java Application!</h1>
                     <p class='description'></p>     <br />
-                    <a href="DepartmentController?action=listDepartment" >Show All Department Items</a>
+                    <a href="DepartmentController?action=listDepartment" style="font-size: 1.5em !important;">Show All Department Items</a>
                     <br />
-                    <a href="EmployeeController?action=listEmployee" >Show All Employee Items</a>
+                    <a href="EmployeeController?action=listEmployee" style="font-size: 1.5em !important;">Show All Employee Items</a>
                 </td>
             </tr>
         </table>

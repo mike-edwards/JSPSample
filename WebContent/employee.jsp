@@ -25,7 +25,7 @@
     </head>
     <body onLoad='setConfiguredOpt("<c:out value="${employee.sex}" />");'>
 
-        <h1 id = "message" style="margin-left: auto; margin-right: auto; width:800px;">Add new employee</h1>
+        <h1 id = "message" style="margin-left: auto; margin-right: auto; width:320px;padding-left: 70px;">Add new employee</h1>
         <form method="POST" action='EmployeeController' name="frmAddEmployee">
             <input type="hidden" name="action" value="<c:out value="${param.action}" />" />
             <table class="addform">

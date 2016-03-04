@@ -26,7 +26,7 @@ public class EmployeeDAO {
     public void addEmployee(Employee employee) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into ANA_MIHALCEANU_RO_IBM_COM.employee(id, first_name,last_name, hiring_date, dept_id, sex, phone, position_id) values (?, ?, ?, ?, ?, ?, ?, ?)");
+                    .prepareStatement("insert into USER05273.employee(id, first_name,last_name, hiring_date, dept_id, sex, phone, position_id) values (?, ?, ?, ?, ?, ?, ?, ?)");
             // Parameters start with 1
             preparedStatement.setInt(1, employee.getId());
             preparedStatement.setString(2, employee.getFirstName());
@@ -46,7 +46,7 @@ public class EmployeeDAO {
     public void deleteEmployee(int id) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("delete from ANA_MIHALCEANU_RO_IBM_COM.employee where id=?");
+                    .prepareStatement("delete from USER05273.employee where id=?");
             // Parameters start with 1
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
@@ -59,7 +59,7 @@ public class EmployeeDAO {
     public void updateEmployee(Employee employee) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("update ANA_MIHALCEANU_RO_IBM_COM.employee set first_name = ?,last_name = ?, hiring_date = ?, dept_id  = ?, sex = ?, phone = ?, position_id = ?" +
+                    .prepareStatement("update USER05273.employee set first_name = ?,last_name = ?, hiring_date = ?, dept_id  = ?, sex = ?, phone = ?, position_id = ?" +
                             "where id=?");
             // Parameters start with 1
             preparedStatement.setString(1, employee.getFirstName());
@@ -81,7 +81,7 @@ public class EmployeeDAO {
         List<Employee> employees = new ArrayList<Employee>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from ANA_MIHALCEANU_RO_IBM_COM.employee");
+            ResultSet rs = statement.executeQuery("select * from USER05273.employee");
             while (rs.next()) {
                 Employee employee = new Employee();
                 employee.setId(rs.getInt("id"));
@@ -105,7 +105,7 @@ public class EmployeeDAO {
         Employee employee = new Employee();
         try {
             PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from ANA_MIHALCEANU_RO_IBM_COM.employee where id=?");
+                    prepareStatement("select * from USER05273.employee where id=?");
             preparedStatement.setInt(1, employeeId);
             ResultSet rs = preparedStatement.executeQuery();
 

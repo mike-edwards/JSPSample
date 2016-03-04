@@ -26,7 +26,7 @@ public class DepartmentDAO {
     public void addDepartment(Department dept) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into ANA_MIHALCEANU_RO_IBM_COM.department(id, name, manager_id) values (?, ?, ?)");
+                    .prepareStatement("insert into USER05273.department(id, name, manager_id) values (?, ?, ?)");
             // Parameters start with 1
             preparedStatement.setInt(1, dept.getId());
             preparedStatement.setString(2, dept.getName());
@@ -41,7 +41,7 @@ public class DepartmentDAO {
     public void deleteDepartment(int id) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("delete from ANA_MIHALCEANU_RO_IBM_COM.department where id=?");
+                    .prepareStatement("delete from USER05273.department where id=?");
             // Parameters start with 1
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
@@ -54,7 +54,7 @@ public class DepartmentDAO {
     public void updateDepartment(Department dept) {
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("update ANA_MIHALCEANU_RO_IBM_COM.department set name = ?, manager_id = ?" +
+                    .prepareStatement("update USER05273.department set name = ?, manager_id = ?" +
                             "where id=?");
             // Parameters start with 1
             preparedStatement.setString(1, dept.getName());
@@ -71,7 +71,7 @@ public class DepartmentDAO {
         List<Department> depts = new ArrayList<Department>();
         try {
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("select * from ANA_MIHALCEANU_RO_IBM_COM.department");
+            ResultSet rs = statement.executeQuery("select * from USER05273.department");
             while (rs.next()) {
                 Department dept = new Department();
                 dept.setId(rs.getInt("id"));

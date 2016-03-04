@@ -1,10 +1,14 @@
+declared-services:
+  JSPSample-DB:
+    label: sqldb
+    plan: sqldb_free
 applications:
 - disk_quota: 1024M
-  host: JSPSample
-  name: JSPSample
+  host: JSPSample-mje
+  name: JSPSample-mje
   path: JSPSample.war
-  domain: mybluemix.net
   instances: 1
   memory: 512M
+  buildpack: liberty-for-java
   services:
-  - SQL Database-04
+  - JSPSample-DB
